@@ -1,0 +1,113 @@
+/*DROP TABLE nba_shot_types;*/
+
+CREATE TABLE nba_shot_types(
+	PLAYER VARCHAR(30),
+	YEAR INT,
+	AGE FLOAT,
+	GP FLOAT,
+	W FLOAT,
+	L FLOAT,
+	MP FLOAT,
+	PCT_FGA_2PT FLOAT,
+	PCT_FGA_3PT FLOAT,
+	PCT_PTS_2PT FLOAT,
+	PCT_PTS_MR FLOAT,
+	PCT_PTS_3PT FLOAT,
+	PCT_PTS_FSTBRK FLOAT,
+	PCT_PTS_FT FLOAT,
+	PCT_PTS_OFF_TOS FLOAT,
+	PCT_PTS_INTHEPT FLOAT,
+	PCT_2PTGFM_ASSTD FLOAT,
+	PCT_2PTGFM_UNASSTD FLOAT,
+	PCT_3PTGFM_ASSTD FLOAT,
+	PCT_3PTGFM_UNASSTD FLOAT,
+	PCT_FGM_ASSTD FLOAT,
+	PCT_FGM_UNASSTD	FLOAT
+);
+
+SELECT * FROM nba_shot_types
+WHERE year < 2018 and year > 2013;
+
+
+/*DROP TABLE nba_player_stats;*/
+
+CREATE TABLE nba_player_stats(
+	PLAYER VARCHAR,
+	YEAR INT, 
+	UNNAMED FLOAT,
+	AGE FLOAT,
+	GP FLOAT,
+	GS FLOAT,
+	MP	FLOAT,
+	PER FLOAT,
+	TS FLOAT,
+	ThPAr FLOAT,	
+	FTr	FLOAT,
+	USG FLOAT,	
+	OWS	FLOAT,
+	WS	FLOAT,
+	FGM	FLOAT,
+	FGA	FLOAT,
+	FGP	FLOAT,
+	ThPM FLOAT,
+	ThPA FLOAT,
+	ThPP FLOAT,
+	TwPM FLOAT,
+	TwPA FLOAT,
+	TwPP FLOAT,
+	eFGP FLOAT,
+	FT FLOAT,	
+	FTA	FLOAT,
+	FTP	FLOAT,
+	ORB	FLOAT,
+	TRB	FLOAT,
+	AST	FLOAT,
+	STL FLOAT,
+	BLK FLOAT,
+	PTS FLOAT
+);
+
+SELECT * FROM nba_player_stats
+WHERE year > 2013
+
+SELECT 
+
+
+
+
+
+
+/*SELECT nba_shot_types.player,
+	nba_shot_types.year,
+	nba_shot_types.PCT_FGA_2PT,
+	nba_shot_types.PCT_FGA_3PT,
+	nba_shot_types.PCT_PTS_2PT,
+	nba_shot_types.PCT_PTS_MR,
+	nba_shot_types.PCT_PTS_3PT,
+	nba_shot_types.PCT_PTS_FSTBRK,
+	nba_shot_types.PCT_PTS_FT,
+	nba_shot_types.PCT_PTS_OFF_TOS
+FROM nba_shot_types
+INNER JOIN nba_player_stats ON 
+nba_shot_types.player = nba_player_stats.player;
+
+SELECT nba_player_stats.player,
+	nba_player_stats.ORB,
+	nba_player_stats.TRB,
+	nba_player_stats.AST,
+	nba_player_stats.STL,
+	nba_player_stats.BLK,
+	nba_player_stats.PTS
+
+FROM nba_player_stats
+	
+INNER JOIN nba_shot_types ON
+nba_player_stats.player = nba_shot_types.player;
+
+
+
+
+FROM nba_shot_types
+FULL OUTER JOIN nba_player_stats ON
+nba_shot_types.player = nba_player_stats.player
+ORDER BY nba_shot_types.player;*/
